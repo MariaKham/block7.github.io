@@ -1,0 +1,121 @@
+.header {
+    height: 88px;
+    padding: 0 16px; 
+    margin: 0;
+    margin-bottom: 24px;
+    background-color: $header-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $bottom-color;
+    }
+@media screen and (min-width: $screen-md) {
+    .header {
+        padding: 0 24px; 
+    }
+}
+@media screen and (min-width: $screen-xl) {
+  .header {
+    border-bottom: none;
+    background-color: $main-color;
+    margin-bottom: 0;
+    height: 42px;
+  }
+}
+
+@media screen and (min-width: $screen-xl) {
+  .header__connect-menu {
+    display: flex;
+    position: absolute;
+    margin-top: 200px;
+  }
+}
+
+.header__burger-btn {
+  margin-right: 16px;
+}
+@media screen and (min-width: $screen-md) {
+  .header__burger-btn{
+    margin-right: 0;
+  }
+}
+
+.header__divider1, .header__divider2 {
+    background-color: $divider-color;
+    border-radius: 1px;
+    width: 2px;
+    height: 32px;
+    margin: 0 20px;
+  }
+
+  .header__burger-logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+
+  .header__divider1 {
+    display: none;
+  }
+  @media screen and (min-width: $screen-md) {
+    .header__divider1 {
+        display: block;
+    }
+}
+  .header__logo {
+    width: 96px;
+    height: 51px;
+    margin-right: auto;
+  }
+
+  .header__connect-menu {
+    display: none;
+  }
+  @media screen and (min-width: $screen-md) {
+       .header__connect-menu {
+        display: flex;
+       justify-content: space-between; 
+    } 
+    .btn-chat,
+    .header__btn-profile {
+      margin-left: 16px;
+    }
+}
+
+.header__btn-description {
+  display: none;
+}
+@media screen and (min-width: $screen-xl) {
+  .header__btn-description {
+    display: block;
+    font-size: $font-size--add;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+}
+
+.header__aside-menu {
+    display: flex;
+    min-width: 96px;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: $screen-xl) {
+  .header {
+    border-bottom: none;
+    background-color: $main-color;
+  }
+  .header__aside-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 375px;
+    margin-top: 95px;
+  }
+  .header__burger-btn,
+  .header__divider1, 
+  .header__logo,
+  .header__connect-menu,
+  .header__divider2 {
+    display: none;
+  }
+}

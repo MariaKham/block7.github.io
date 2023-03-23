@@ -1,0 +1,265 @@
+.text {
+    font-family: $fonts;
+    color: $link-color--gray;
+    font-size: $font-size--add;
+    font-weight: 300;
+    font-style: normal;
+}
+.brands__title,
+.technique__title,
+.prices__title {
+    text-transform: uppercase;
+    padding: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(270deg, $main-color 0%, $header-color 98.61%);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+height: 12px;
+width: 12px;
+background-color: $pag-color;
+} 
+
+.brands__container,
+.technique__container,
+.prices__container {
+    overflow: hidden;
+     width: 100%; 
+     background-color: $slider-color;
+     min-height: 155px;
+     margin: 0 auto; 
+     position: relative;
+}
+.technique__container {
+    min-height: 250px;
+}
+.technique-pag {
+    padding-bottom: 20px;
+}
+.brands__wrapper,
+.technique__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 16px;
+    padding-bottom: 0;
+}
+ .brands-pag {
+    padding-bottom: 20px;
+}  
+
+.brands__img,
+.technique__img {
+    flex-shrink: 0;
+    width: 240px;
+    height: 72px;
+    margin-right: 24px;
+    margin-bottom: 1.5%;
+}
+.technique__img {
+    height: 160px;
+}
+.brands__show-btn,
+.technique__show-btn {
+    display: none;
+}
+
+@media screen and (min-width: $screen-md) {
+    .brands__img,
+    .technique__img {
+        width: 224px;
+        margin-right: 16px;
+    }
+    
+    .brands__wrapper,
+    .technique__wrapper  {
+        display: grid;
+        justify-items: center; 
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .brands__show-btn,
+    .technique__show-btn {
+        display: block;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+     .brands__card--visually-hidden,
+     .technique__card--visually-hidden {
+        display: none;
+    }
+
+    .brands__show-btn,
+    .technique__show-btn {
+        font-weight: 500;
+        color: $font-color--black;
+        letter-spacing: -0.2 px;
+        margin-top: 25px;
+        margin-bottom: 35px;
+        border: none;
+        padding-left: 30px;
+        white-space: nowrap;
+    }
+
+  }
+
+  .brands__show-btn::before,
+  .technique__show-btn::before {
+    content: url("../img/icon.svg");
+    margin-right: 15px;
+   
+  }
+
+  .brands__show-btn--close::before,
+  .technique__show-btn--close::before {
+    content: url("../img/expand.svg");
+    margin-right: 15px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    .brands__card--visually-hidden:nth-child(7),
+    .brands__card--visually-hidden:nth-child(8),
+    .technique__card--visually-hidden:nth-child(4) {
+        display: grid;
+    }
+  }
+
+.prices__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-right: 16px;
+}
+
+.prices__container {
+    min-height: 260px;
+}
+.prices-pag {
+padding-top: 80px;
+}
+  .prices__card {
+    display: flex;
+    flex-direction: column;
+    width: 265px;
+    height: 210px;
+    margin: 16px 0 0 16px;
+    background-color: $header-color;
+    border-radius: 6px;
+    padding-left: 16px;
+    color: $font-color--black;
+    font-size: $font-size;
+    opacity: 1;
+}
+
+
+
+.prices__card-header {
+    display: none;
+}
+
+.prices__card-btn {
+    width: 120px;
+    height: 30px;
+    background: $button-color;
+    border-radius: 16px;
+    color:$header-color;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    bottom: 40px;
+    left: 110px;
+}
+.prices__card-btn::after {
+    content: url('../img/dropdown.svg');
+    margin-left: 12px;
+}
+.prices__card-name::before {
+    content: "Ремонтные услуги";
+    display: block;
+    color: $link-color--gray;
+    font-weight: 500;
+    opacity: 72.18%;
+
+}
+.prices__card-price::before {
+    content: "Цена";
+    display: block;
+    color: $link-color--gray;
+    font-weight: 500;
+    opacity: 72.18%;
+}
+.prices__card-time::before {
+    content: "Срок";
+    display: block;
+    color: $link-color--gray;
+    font-weight: 500;
+    opacity: 72.18%;
+}
+
+.prices__text {
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0.2px;
+color: $font-color--black;
+padding-left: 16px;
+margin-right: 16px;
+}
+.prices__link {
+    text-decoration: none;
+    font-weight: 500;
+    color: $font-color--black;
+    padding-left: 16px;
+    padding-bottom: 40px;
+    margin-right: 16px;
+    font-size: $font-size;
+}
+.prices__link::after {
+    content:url('../img/line.svg');
+    margin-left: 5px;
+}
+
+@media screen and (min-width: $screen-md){
+    .prices__card-header {
+        display: block;
+        background-color: $main-color;
+        color: $link-color--gray;
+        font-weight: 500;
+        opacity: 72.18%;
+    }
+    .prices__wrapper {
+display: block;
+    }
+    .prices__card {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        width: auto;
+        height: 60px;
+        margin-top: 0;
+        margin-right: 16px;
+        align-items: center;
+        text-align: left;
+    }
+    .prices__card:nth-child(1){
+        margin-top: 16px;
+  
+    }
+    .prices__card:nth-child(6){
+        margin-bottom: 16px;
+    }
+    .prices__card-header .prices__card-time {
+        grid-column: span 2;
+    }
+    .prices__card-name::before,
+    .prices__card-price::before,
+    .prices__card-time::before {
+        display: none;
+    }
+    .prices__card-btn {
+        position: static;
+    }
+}

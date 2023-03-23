@@ -1,0 +1,5 @@
+node_modules/
+dist/
+blockMenu.js
+general.js
+main.js
